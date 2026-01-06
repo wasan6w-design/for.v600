@@ -1,0 +1,13 @@
+<?php
+$index = $_POST['index'];
+
+$xml = new DOMDocument();
+$xml->load('Trainees.xml');
+
+$trainees = $xml->getElementsByTagName('Trainer');
+$trainees->item($index)->parentNode
+          ->removeChild($trainees->item($index));
+		  
+$xml->save('Trainees.xml');	
+
+?>
