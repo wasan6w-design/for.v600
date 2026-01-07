@@ -2,12 +2,12 @@
 $index = $_POST['index'];
 
 $xml = new DOMDocument();
-$xml->load('Trainees.xml');
+$xml->load('test1.xml');
 
-$trainees = $xml->getElementsByTagName('Trainer');
-$trainees->item($index)->parentNode
-          ->removeChild($trainees->item($index));
+$tariner = $xml->getElementsByTagName('tariner');
+$tariner->item($index)->parentNode
+          ->removeChild($tariner->item($index));
 		  
-$xml->save('Trainees.xml');	
+$xml->save('test1.xml');	
 
 ?>
